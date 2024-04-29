@@ -7,8 +7,6 @@ import Slider from "react-slick";
 export default function DealOfMonthRight() {
   const sliderRef = useRef(null);
 
-  console.log(sliderRef);
-
   const settings = {
     focusOnSelect: true,
     infinite: true,

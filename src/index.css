@@ -26,13 +26,14 @@
   padding: 0 16px;
 }
 
-.slick-arrow {
+.arrows {
+  position: absolute;
   top: 350px;
   z-index: 5;
 }
 
-.slick-prev,
-.slick-next {
+.arrow-prev,
+.arrow-next {
   background-color: #fff !important;
   height: 40px !important;
   width: 40px !important;
@@ -41,24 +42,29 @@
   align-items: flex-start;
   border-radius: 15px !important;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.slick-prev {
+.arrow-prev {
   left: -100px;
 }
 
-.slick-next {
+.arrow-next {
   left: -50px;
   right: unset !important;
 }
 
 .slick-prev::before {
-  content: "⬅" !important;
-  color: #000;
+  content: "" !important;
+  color: #000 !important;
 }
 .slick-next::before {
-  content: "➡" !important;
-  color: #000;
+  content: "" !important;
+  color: #000 !important;
 }
 
 .swiper {
@@ -356,14 +362,14 @@ h2 {
     margin-bottom: 70px;
   }
 
-  .slick-arrow {
-    top: 450px;
+  .arrows {
+    top: 430px;
   }
 
-  .slick-prev {
+  .arrow-prev {
     left: 0 !important;
   }
-  .slick-next {
+  .arrow-next {
     left: 50px !important;
   }
 }

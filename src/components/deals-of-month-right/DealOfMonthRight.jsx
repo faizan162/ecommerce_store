@@ -1,9 +1,14 @@
 import { Box, Button, Heading, Image, Text } from "@chakra-ui/react";
-import React, { useState, Component } from "react";
+import React, { useState, Component, useRef } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 import Slider from "react-slick";
 
 export default function DealOfMonthRight() {
+  const sliderRef = useRef(null);
+
+  console.log(sliderRef);
+
   const settings = {
     focusOnSelect: true,
     infinite: true,
@@ -32,8 +37,27 @@ export default function DealOfMonthRight() {
   };
   return (
     <>
-      <Box className="deals-right" height="400px" width="50%">
-        <Slider {...settings}>
+      <Box
+        position="relative"
+        className="deals-right"
+        height="400px"
+        width="50%"
+      >
+        <Box className="arrows">
+          <Box
+            onClick={() => sliderRef.current.slickNext()}
+            className="arrow-next"
+          >
+            <FaArrowRight />
+          </Box>
+          <Box
+            onClick={() => sliderRef.current.slickPrev()}
+            className="arrow-prev"
+          >
+            <FaArrowLeft />
+          </Box>
+        </Box>
+        <Slider ref={sliderRef} {...settings}>
           <Box className="deal-img-container" height="400px">
             <Image
               width="100%"

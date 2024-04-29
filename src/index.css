@@ -58,6 +58,11 @@
   right: unset !important;
 }
 
+.slick-next,
+.slick-prev {
+  display: none !important;
+}
+
 .slick-prev::before {
   content: "" !important;
   color: #000 !important;
